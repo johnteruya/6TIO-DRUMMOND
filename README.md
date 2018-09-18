@@ -2,6 +2,7 @@
 
 ## Primeiros Inserts no Banco Mysql
 ### Segue a baixo insert na parte de seguranças + usuários.
+### Fundamental antes de executar o programa criar uma database chamada "eventosapp".
 
 insert into usuarios_roles values ("admin","ROLE_ADMIN");
 insert into usuarios_roles values ("user","ROLE_ADMIN");
