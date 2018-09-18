@@ -32,3 +32,6 @@ insert into role values ('ROLE_USER');
     git config --global alias.ac '!git add -A && git commit -m'
     git config --global alias.envia '!git push && git rebase' --replace-all
 
+### Comando SOMENTE para o PROJETO SPRINGBOOT
+
+git config --global alias.atualiza '!git checkout projeto-springboot/produção && git merge projeto-springboot/desenvolvimento && git checkout projeto-springboot/desenvolvimento'
