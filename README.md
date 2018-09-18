@@ -35,3 +35,14 @@ insert into role values ('ROLE_USER');
 ### Comando SOMENTE para o PROJETO SPRINGBOOT
 
 git config --global alias.atualiza '!git checkout projeto-springboot/produção && git merge projeto-springboot/desenvolvimento && git checkout projeto-springboot/desenvolvimento'
+
+
+## Alias para Checkout
+### Projeto-Springboot/desenvolvimento
+git config --global alias.cosbd '!git checkout projeto-springboot/desenvolvimento'
+
+### Projeto-Springboot/produção
+git config --global alias.cosbp '!git checkout projeto-springboot/produção'
+
+### Projeto-Springboot/original
+git config --global alias.cosbo '!git checkout projeto-springboot/original'
