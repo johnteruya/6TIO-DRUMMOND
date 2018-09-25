@@ -25,6 +25,7 @@ insert into role values ('ROLE_USER');
     git config --global alias.branches branch -a
     git config --global alias.remotes remote -a
     git config --global alias.delbr branch -D
+    git config --global alias.pl pull
 
 ### Comando Personalizados
 
