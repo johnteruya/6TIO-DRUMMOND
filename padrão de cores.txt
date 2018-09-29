@@ -15,4 +15,12 @@ TEMA 02
 	SECUNDÁRIO = ff2e63
 	NEUTRO/LEITURA = eaeaea
 
+TEMA 03
 
+	CLARA - #f2d7ee
+	ESCURA - #d3bcc0
+
+	CLARA - #a5668b
+	ESCURA - #69306d
+
+	SOMBRA - #0e103d
