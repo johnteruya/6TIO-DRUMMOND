@@ -1,0 +1,18 @@
+TEMA 01
+
+	PRINCIAL = cefff1
+	SOMBRA = ace7ef
+
+	SECUNDÁRIA = a56cc1
+	SOMBRA = a6acec
+
+	CONTRASTE = fff
+
+TEMA 02
+
+	PRINCIPAL = 08d9d6
+	SOMBRA = 252a34
+	SECUNDÁRIO = ff2e63
+	NEUTRO/LEITURA = eaeaea
+
+
