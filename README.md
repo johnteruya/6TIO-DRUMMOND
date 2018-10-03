@@ -5,7 +5,7 @@
 ### Fundamental antes de executar o programa criar uma database chamada "eventosapp".
 
 insert into usuarios_roles values ("admin","ROLE_ADMIN");
-insert into usuarios_roles values ("user","ROLE_ADMIN");
+insert into usuarios_roles values ("user","ROLE_USER");
 
 insert into usuario values ('admin','admin','$2a$10$YgfXvTdbT7VOVtFn/xeJTOXloz/KmC7am6lttFJxwWwETiBLqBJCq');
 insert into usuario values ('user','user','$2a$10$S/1O/xVWEpffUioV/EcY7e81ifeocWV3jLt5lIbcQzQW/jGyoU.PK');
