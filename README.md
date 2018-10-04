@@ -2,7 +2,7 @@
 
 ## Primeiros Inserts no Banco Mysql
 ### Segue a baixo insert na parte de seguranças + usuários.
-### Fundamental antes de executar o programa criar uma database chamada "eventosapp".
+### Fundamental antes de executar o programa criar uma database chamada "eventosapp"
 
 insert into usuarios_roles values ("admin","ROLE_ADMIN");
 insert into usuarios_roles values ("user","ROLE_USER");
@@ -40,10 +40,10 @@ git config --global alias.atualiza '!git checkout projeto-springboot/produção 
 
 ## Alias para Checkout
 ### Projeto-Springboot/desenvolvimento
-git config --global alias.cosbd '!git checkout projeto-springboot/desenvolvimento'
+git config --global alias.psd '!git checkout projeto-springboot/desenvolvimento'
 
 ### Projeto-Springboot/produção
-git config --global alias.cosbp '!git checkout projeto-springboot/produção'
+git config --global alias.psp '!git checkout projeto-springboot/produção'
 
 ### Projeto-Springboot/original
-git config --global alias.cosbo '!git checkout projeto-springboot/original'
+git config --global alias.pso '!git checkout projeto-springboot/original'
