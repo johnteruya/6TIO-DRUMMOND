@@ -1,1 +1,10 @@
-node-modules/
+### NODE JS ###
+/node_modules/
+
+
+### ECLIPSE ###
+/target/
+
+/.settings/
+/.classpath/
+/.project/
