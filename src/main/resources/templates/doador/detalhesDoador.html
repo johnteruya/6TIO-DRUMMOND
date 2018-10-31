@@ -2,7 +2,8 @@
 <html xmlns:th="http://thymeleaf.org"
    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
    <head>
-      <title>EventosApp</title>
+   	  <meta charset="utf-8"/>
+      <title>Sistema de Doações</title>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <!--Import materialize.css-->
@@ -15,26 +16,26 @@
       <header>
          <nav class="menu">
             <div class="nav-wrapper">
-               <a href="#" class="brand-logo">Evento</a>
+               <a href="/index" class="brand-logo">Doador</a>
                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Lista de evento</a></li>
+                  <li><a href="/doadores" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Lista de Doadores</a></li>
                </ul>
             </div>
          </nav>
       </header>
-      <div th:each="evento : ${evento}" class="container detalhesEvento">
-         <h5>Detalhes do Evento</h5>
+      <div th:each="doador : ${doador}" class="container detalhesEvento">
+         <h5>Detalhes do Doador</h5>
          <div class="row">
-            <p>Nome: <span th:text="${evento.nome}"></span></p>
-            <p>Local: <span th:text="${evento.local}"></span></p>
-            <p>Data: <span th:text="${evento.data}"></span></p>
-            <p>Horario: <span th:text="${evento.horario}"></span></p>
+            <p>Nome: <span th:text="${doador.nome}"></span></p>
+            <p>Local: <span th:text="${doador.local}"></span></p>
+            <p>Data: <span th:text="${doador.data}"></span></p>
+            <p>Horario: <span th:text="${doador.horario}"></span></p>
          </div>
       </div>
       <th:block th:include="mensagemValidacao"></th:block>
       <div class="container formConvidado">
-         <form method="post" th:object="${convidado}">
-            Nome: <input type="text" value="" name="nomeConvidado" placeholder="Nome Completo"/>
+         <form method="post" th:object="${doador}">
+            Nome: <input type="text" value="" name="nomeDoacao" placeholder="Nome Completo"/>
             Rg: <input type="text" value="" name="rg" placeholder="AA-00.000.000" class="validate"/>
             <button class="waves-effect waves-light btn" type="submit">Adicionar</button>
          </form>
@@ -42,16 +43,16 @@
       <table class="container tabelaConvidado">
          <thead>
             <tr>
-               <th>Nome Convidado</th>
+               <th>Doação</th>
                <th>RG</th>
                <th>Deletar</th>
             </tr>
          </thead>
          <tbody>
-            <tr th:each="convidado : ${convidados}">
-               <td><span th:text="${convidado.nomeConvidado}"></span></td>
-               <td><span th:text="${convidado.rg}"></span></td>
-               <td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarConvidado').arg(0, convidado.rg)).build()}"><i class="material-icons left">delete</i></a></td>
+            <tr th:each="doacao : ${doacoes}">
+               <td><span th:text="${doacao.nomeDoacao}"></span></td>
+               <td><span th:text="${doacao.rg}"></span></td>
+               <td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('DC#deletarDoacao').arg(0, doacao.rg)).build()}"><i class="material-icons left">delete</i></a></td>
             </tr>
          </tbody>
       </table>

@@ -2,7 +2,8 @@
 <html xmlns:th="http://thymeleaf.org"
    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
    <head>
-      <title>EventosApp</title>
+   	  <meta charset="utf-8"/>
+      <title>Sistema de Doações</title>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <!--Import materialize.css-->
@@ -15,9 +16,9 @@
       <header>
          <nav class="menu">
             <div class="nav-wrapper">
-               <a href="#" class="brand-logo">Lista de Eventos</a>
+               <a href="/index" class="brand-logo">Lista de Doadores</a>
                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a href="/cadastrarEvento" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar evento</a></li>
+                  <li><a href="/cadastrarDoador" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar Nova Doação</a></li>
                </ul>
             </div>
          </nav>
@@ -33,12 +34,12 @@
             </tr>
          </thead>
          <tbody>
-            <tr th:each="evento : ${eventos}">
-               <td><a th:href="${(#mvc.url('EC#detalhesEvento').arg(0, evento.codigo)).build()}"><span th:text="${evento.nome}"></span></a></td>
-               <td><span th:text="${evento.local}"></span></td>
-               <td><span th:text="${evento.data}"></span></td>
-               <td><span th:text="${evento.horario}"></span></td>
-               <td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarEvento').arg(0, evento.codigo)).build()}"><i class="material-icons left">delete</i></a></td>
+            <tr th:each="doador : ${doadores}">
+               <td><a th:href="${(#mvc.url('DC#detalhesDoador').arg(0, doador.codigo)).build()}"><span th:text="${doador.nome}"></span></a></td>
+               <td><span th:text="${doador.local}"></span></td>
+               <td><span th:text="${doador.data}"></span></td>
+               <td><span th:text="${doador.horario}"></span></td>
+               <td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('DC#deletarDoador').arg(0, doador.codigo)).build()}"><i class="material-icons left">delete</i></a></td>
             </tr>
          </tbody>
       </table>

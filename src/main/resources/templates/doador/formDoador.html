@@ -2,7 +2,8 @@
 <html xmlns:th="http://thymeleaf.org"
    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
    <head>
-      <title>EventosApp</title>
+   	  <meta charset="utf-8"/>
+      <title>Sistema de Doações</title>
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <!--Import materialize.css-->
@@ -15,15 +16,15 @@
       <header>
          <nav class="menu">
             <div class="nav-wrapper">
-               <a href="#" class="brand-logo">Cadastro de Eventos:</a>
+               <a href="/index" class="brand-logo">Cadastro de Doadores:</a>
                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Eventos</a></li>
+                  <li><a href="/doadores" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Doadores</a></li>
                </ul>
             </div>
          </nav>
       </header>
       <th:block th:include="mensagemValidacao"></th:block>
-      <div class="container formEvento">
+      <div class="container formDoador">
          <form class="container" method="post">
             Nome: <input type="text" value="" name="nome"/>
             <div class="row">
