@@ -50,7 +50,7 @@ public class DoadorController {
 	
 	
 	//MÉTODOS DE LISTAGEM
-	@RequestMapping("/Doadores")
+	@RequestMapping("/doadores")
 	public ModelAndView listaDoadores(){
 		ModelAndView mv = new ModelAndView("listaDoadores");
 		Iterable<Doador> doadores = er.findAll();
