@@ -1,4 +1,4 @@
-package com.eventosapp.models;
+package br.com.doacoesapp.models;
 
 import java.io.Serializable;
 import java.util.Collection;

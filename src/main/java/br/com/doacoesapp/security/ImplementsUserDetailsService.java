@@ -1,6 +1,8 @@
-package com.eventosapp.security;
+package br.com.doacoesapp.security;
 
-import com.eventosapp.repository.UsuarioRepository;
+import br.com.doacoesapp.models.Usuario;
+import br.com.doacoesapp.repository.UsuarioRepository;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +11,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Repository;
-
-import com.eventosapp.models.Usuario;
 
 
 @Repository

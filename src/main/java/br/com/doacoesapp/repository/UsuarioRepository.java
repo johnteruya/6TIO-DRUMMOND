@@ -1,8 +1,8 @@
-package com.eventosapp.repository;
+package br.com.doacoesapp.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.eventosapp.models.Usuario;
+import br.com.doacoesapp.models.Usuario;
 
 public interface UsuarioRepository extends CrudRepository<Usuario, String>{
 

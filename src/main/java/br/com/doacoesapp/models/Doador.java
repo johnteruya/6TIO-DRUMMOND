@@ -1,4 +1,4 @@
-package com.eventosapp.models;
+package br.com.doacoesapp.models;
 
 import java.io.Serializable;
 import java.util.List;
@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 
 @Entity
-public class Evento implements Serializable{
+public class Doador implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -33,7 +33,7 @@ public class Evento implements Serializable{
 	private String horario;
 	
 	@OneToMany
-	private List<Convidado> convidados;
+	private List<Doacao> doacao;
 	
 	public long getCodigo() {
 		return codigo;

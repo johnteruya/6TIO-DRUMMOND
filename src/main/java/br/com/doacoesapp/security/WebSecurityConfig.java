@@ -1,4 +1,4 @@
-package com.eventosapp.security;
+package br.com.doacoesapp.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -22,8 +22,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable().authorizeRequests()
 		.antMatchers(HttpMethod.GET, "/").permitAll()
-		.antMatchers(HttpMethod.GET, "/cadastrarEvento").hasRole("ADMIN")
-		.antMatchers(HttpMethod.POST, "/cadastrarEvento").hasRole("ADMIN")
+		.antMatchers(HttpMethod.GET, "/cadastrarDoador").hasRole("ADMIN")
+		.antMatchers(HttpMethod.POST, "/cadastrarDoador").hasRole("ADMIN")
 		.anyRequest().authenticated()
 		.and().formLogin().permitAll()
 		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
@@ -37,6 +37,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Override
 	public void configure(WebSecurity web) throws Exception{
-		web.ignoring().antMatchers("/materialize/**", "/style/**");
+		web.ignoring().antMatchers("/materialize/**", "/style/**,/bootstrap/**");
 	}
 }
