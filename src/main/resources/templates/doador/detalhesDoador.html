@@ -23,7 +23,7 @@
             </div>
          </nav>
       </header>
-      <div th:each="doador : ${doador}" class="container detalhesEvento">
+      <div th:each="doador : ${doador}" class="container detalhesDoador">
          <h5>Detalhes do Doador</h5>
          <div class="row">
             <p>Nome: <span th:text="${doador.nome}"></span></p>
@@ -33,14 +33,14 @@
          </div>
       </div>
       <th:block th:include="mensagemValidacao"></th:block>
-      <div class="container formConvidado">
+      <div class="container formDoacao">
          <form method="post" th:object="${doador}">
             Nome: <input type="text" value="" name="nomeDoacao" placeholder="Nome Completo"/>
             Rg: <input type="text" value="" name="rg" placeholder="AA-00.000.000" class="validate"/>
             <button class="waves-effect waves-light btn" type="submit">Adicionar</button>
          </form>
       </div>
-      <table class="container tabelaConvidado">
+      <table class="container tabelaDoacdor">
          <thead>
             <tr>
                <th>Doação</th>

@@ -1,11 +1,11 @@
-.detalhesEvento{
+.detalhesDoacao{
 	box-shadow: 0px 0px 5px grey;
 	padding-top: 20px;
 	padding-left: 20px;
 	margin-bottom: 60px;
 }
 
-.formConvidado{
+.formDoacao{
 	box-shadow: 0px 0px 5px grey;
 	padding-top: 20px;
 	padding-left: 20px;
@@ -13,11 +13,11 @@
 	margin-bottom: 60px;
 }
 
-.tabelaConvidado{
+.tabelaDoacao{
 	width: 50%;
 }
 
-.formEvento{
+.formDoador{
 	box-shadow: 0px 0px 5px grey;
 	padding-top: 20px;
 	padding-left: 20px;
