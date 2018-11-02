@@ -4,9 +4,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,9 +20,9 @@ import br.com.doacoesapp.repository.DoadorRepository;
 public class DoadorController {
 
 	//TESTE-VIEWS
-	@RequestMapping("/formDoador2")
-	public String formDoador2(){
-		return "doador/formDoador2";
+	@RequestMapping("/listaDoadores2")
+	public String listaDoadores2(){
+		return "listaDoadores2";
 	}
 	
 	//IMPORTANDO REPOSITÓRIOS
