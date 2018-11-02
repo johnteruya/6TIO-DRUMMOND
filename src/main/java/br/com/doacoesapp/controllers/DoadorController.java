@@ -22,9 +22,9 @@ import br.com.doacoesapp.repository.DoadorRepository;
 public class DoadorController {
 
 	//TESTE-VIEWS
-	@RequestMapping("/newindex")
-	public String NewIndex(){
-		return "NewIndex";
+	@RequestMapping("/formDoador2")
+	public String formDoador2(){
+		return "doador/formDoador2";
 	}
 	
 	//IMPORTANDO REPOSITÓRIOS
