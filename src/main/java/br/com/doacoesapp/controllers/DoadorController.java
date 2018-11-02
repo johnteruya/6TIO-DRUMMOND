@@ -21,6 +21,11 @@ import br.com.doacoesapp.repository.DoadorRepository;
 @Controller
 public class DoadorController {
 
+	//TESTE-VIEWS
+	@RequestMapping("/newindex")
+	public String NewIndex(){
+		return "NewIndex";
+	}
 	
 	//IMPORTANDO REPOSITÓRIOS
 	@Autowired
