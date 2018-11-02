@@ -42,12 +42,12 @@ public class DoadorController {
 	@RequestMapping(value="/cadastrarDoador", method=RequestMethod.POST)
 	public String form(@Valid Doador doador, BindingResult result, RedirectAttributes attributes){
 		if(result.hasErrors()){
-			attributes.addFlashAttribute("mensagem", "Verifique os campos!");
+			attributes.addFlashAttribute("mensagem", "Verifique os Campos!");
 			return "redirect:/cadastrarDoador";
 		}
 		
 		er.save(doador);
-		attributes.addFlashAttribute("mensagem", "Doador cadastrado com sucesso!");
+		attributes.addFlashAttribute("mensagem", "Cadastro Realizado com Sucesso!");
 		return "redirect:/cadastrarDoador";
 	}
 	
@@ -76,13 +76,13 @@ public class DoadorController {
 	@RequestMapping(value="/{codigo}", method=RequestMethod.POST)
 	public String detalhesDoadorPost(@PathVariable("codigo") long codigo, @Valid Doacao doacao,  BindingResult result, RedirectAttributes attributes){
 		if(result.hasErrors()){
-			attributes.addFlashAttribute("mensagem", "Verifique os campos!");
+			attributes.addFlashAttribute("mensagem", "Verifique os Campos!");
 			return "redirect:/{codigo}";
 		}
 		Doador doador = er.findByCodigo(codigo);
 		doacao.setDoador(doador);
 		cr.save(doacao);
-		attributes.addFlashAttribute("mensagem", "Convidado adicionado com sucesso!");
+		attributes.addFlashAttribute("mensagem", "Cadastro Realizado com Sucesso!");
 		return "redirect:/{codigo}";
 	}
 	
