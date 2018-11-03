@@ -41,11 +41,11 @@
 						</thead>
 						<tbody>
 						   <tr th:each="doador : ${doadores}">
-							  <td><a th:href="${(#mvc.url('DC#detalhesDoador').arg(0, doador.codigo)).build()}"><span th:text="${doador.nome}"></span></a></td>
+							  <td><a th:href="${(#mvc.url('DC#detalhesDoador').arg(0, doador.idDoador)).build()}"><span th:text="${doador.nome}"></span></a></td>
 							  <td><span th:text="${doador.local}"></span></td>
 							  <td><span th:text="${doador.data}"></span></td>
 							  <td><span th:text="${doador.horario}"></span></td>
-							  <td><a th:href="${(#mvc.url('DC#deletarDoador').arg(0, doador.codigo)).build()}"><i class="fas fa-trash"></i></a></td>
+							  <td><a th:href="${(#mvc.url('DC#deletarDoador').arg(0, doador.idDoador)).build()}"><i class="fas fa-trash"></i></a></td>
 						   </tr>
 						</tbody>
 						

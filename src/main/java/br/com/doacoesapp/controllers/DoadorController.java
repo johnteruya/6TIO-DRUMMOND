@@ -61,9 +61,9 @@ public class DoadorController {
 		return mv;
 	}
 	
-	@RequestMapping(value="/{codigo}", method=RequestMethod.GET)
-	public ModelAndView detalhesDoador(@PathVariable("codigo") long codigo){
-		Doador doador = er.findByCodigo(codigo);
+	@RequestMapping(value="/{idDoador}", method=RequestMethod.GET)
+	public ModelAndView detalhesDoador(@PathVariable("idDoador") long idDoador){
+		Doador doador = er.findByIdDoador(idDoador);
 		ModelAndView mv = new ModelAndView("doador/detalhesDoador");
 		mv.addObject("doador", doador);
 		
@@ -73,24 +73,24 @@ public class DoadorController {
 		return mv;
 	}
 	
-	@RequestMapping(value="/{codigo}", method=RequestMethod.POST)
-	public String detalhesDoadorPost(@PathVariable("codigo") long codigo, @Valid Doacao doacao,  BindingResult result, RedirectAttributes attributes){
+	@RequestMapping(value="/{idDoador}", method=RequestMethod.POST)
+	public String detalhesDoadorPost(@PathVariable("idDoador") long idDoador, @Valid Doacao doacao,  BindingResult result, RedirectAttributes attributes){
 		if(result.hasErrors()){
 			attributes.addFlashAttribute("mensagem", "Verifique os Campos!");
-			return "redirect:/{codigo}";
+			return "redirect:/{idDoador}";
 		}
-		Doador doador = er.findByCodigo(codigo);
+		Doador doador = er.findByIdDoador(idDoador);
 		doacao.setDoador(doador);
 		cr.save(doacao);
 		attributes.addFlashAttribute("mensagem", "Cadastro Realizado com Sucesso!");
-		return "redirect:/{codigo}";
+		return "redirect:/{idDoador}";
 	}
 	
 	
 	//METODOS PARA DELEÇÃO
 	@RequestMapping("/deletarDoador")
-	public String deletarDoador(long codigo){
-		Doador doador = er.findByCodigo(codigo);
+	public String deletarDoador(long idDoador){
+		Doador doador = er.findByIdDoador(idDoador);
 		er.delete(doador);
 		return "redirect:/doadores";
 	}
@@ -101,8 +101,8 @@ public class DoadorController {
 		cr.delete(doacao);
 		
 		Doador doador = doacao.getDoador();
-		long codigoLong = doador.getCodigo();
-		String codigo = "" + codigoLong;
-		return "redirect:/" + codigo;
+		long idDoadorLong = doador.getIdDoador();
+		String idDoador = "" + idDoadorLong;
+		return "redirect:/" + idDoador;
 	}
 }	
