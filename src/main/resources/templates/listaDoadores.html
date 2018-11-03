@@ -23,7 +23,7 @@
     </div>
 	<section>
 		<div class="container text-center py-5" style="background-color: white">
-			<h2 class="text-center py-3">Listagem Doadores</h2>
+			<h3 class="display-4 text-center py-3">Lista de Doadores</h3>
 			<div class="row py-3">
 				<div class="col-md-12">
 					<table class="table table-hover">
@@ -42,7 +42,7 @@
 							  <td><span th:text="${doador.local}"></span></td>
 							  <td><span th:text="${doador.data}"></span></td>
 							  <td><span th:text="${doador.horario}"></span></td>
-							  <td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('DC#deletarDoador').arg(0, doador.codigo)).build()}"><i class="fas fa-trash"></i></a></td>
+							  <td><a th:href="${(#mvc.url('DC#deletarDoador').arg(0, doador.codigo)).build()}"><i class="fas fa-trash"></i></a></td>
 						   </tr>
 						</tbody>
 						

@@ -26,14 +26,12 @@
     <!-- FORMULÁRIO -->
 	<section>
 		<div class="container py-5" style="background-color: white">
-			<h2 class="text-center py-3">Inclusão de Novo Doador</h2>
+			<h3 class="display-4 text-center py-3">Inclusão de Novo Doador</h3>
 			<form method="post">
 				<div class="row" style="width: 100%; max-width: 820px; padding: 15px; margin: 0 auto">
 					<div class="col-md-12 py-3">
-						<!-- VERIFICADOR DE CAMPOS NULOS -->
-					    <span class="py-5"><th:block th:include="mensagemValidacao"></th:block></span>
 						<label> Nome: </label> 
-						<input class="form-control" placeholder="Inserir Nome" type="text" value="" name="nome"/>
+						<input class="form-control" placeholder="Inserir Nome" type="text" name="nome"/>
 					</div>
 					<div class="col-md-6 py-3">
 						<label> Local: </label>
@@ -48,16 +46,23 @@
 						<div class="row">
 							<div class="col-md-6">
 								<label> Data: </label>
-								<input class="form-control" type="date" value="" name="data"/>
+								<input class="form-control" type="date" name="data"/>
 							</div>
 							<div class="col-md-6">
 								<label> Horário: </label>
-								<input class="form-control" type="time" value="" name="horario"/>
+								<input class="form-control" type="time" name="horario"/>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-12 pt-3">
-						<button style="width: 100%; max-width: 100px; padding: 5px; margin: 0 auto" class="btn btn-primary btn-lg btn-block" type="submit"> Salvar </button>
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-10 text-center">
+								<th:block th:include="mensagemValidacao"></th:block>
+							</div>
+							<div class="col-md-2 text-right py-3">
+								<button class="btn btn-primary" type="submit">Adicionar</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</form>
