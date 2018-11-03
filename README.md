@@ -42,14 +42,11 @@ git config --global alias.atualiza '!git checkout projeto-springboot/produção 
 ### Projeto-Springboot-src
 git config --global alias.ps 'git checkout projeto/src'
 
-### Projeto-Springboot/desenvolvimento
-git config --global alias.psd '!git checkout projeto-springboot/desenvolvimento'
+### Projeto-Springboot/dev
+git config --global alias.psd '!git checkout projeto-springboot/dev'
 
-### Projeto-Springboot/produção
-git config --global alias.psp '!git checkout projeto-springboot/produção'
+### Projeto-Springboot/prod
+git config --global alias.psp '!git checkout projeto-springboot/prod'
 
-### Projeto-Springboot/original
-git config --global alias.pso '!git checkout projeto-springboot/original'
-
-### Projeto-Springboot/views
-git config --global alias.psv '!git checkout projeto-springboot/views'
+### Atualizando Branch Prod
+git config --global alias.atualiza '!git checkout projeto-springboot/dev && git merge projeto-springboot/dev && git checkout projeto-springboot/dev'
