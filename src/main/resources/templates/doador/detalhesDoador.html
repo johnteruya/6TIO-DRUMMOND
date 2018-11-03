@@ -54,8 +54,12 @@
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">	
-									<label>Rg:</label>
-									<input class="form-control" type="text" name="rg" placeholder="AA-00.000.000"/>
+									<label>Tipo de Item:</label>
+									<select class="custom-select"  name="tipoItem">
+										<option>Selecione o Tipo do Item</option>
+										<option value="Alimento Perecível">Alimento Perecível</option>
+										<option value="Alimento Não Perecível">Alimento Não Perecível</option>
+									</select>
 								</div>
 							</div>
 							<div class="col-md-12">
@@ -79,15 +83,15 @@
 						<thead>
 							<tr>
 								<th scope="col">Doação</th>
-								<th scope="col">RG</th>
+								<th scope="col">Tipo do Item</th>
 								<th scope="col">Remover</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr th:each="doacao : ${doacoes}">
 								<td><span th:text="${doacao.nomeDoacao}"></span></td>
-								<td><span th:text="${doacao.rg}"></span></td>
-								<td><a th:href="${(#mvc.url('DC#deletarDoacao').arg(0, doacao.rg)).build()}"><i class="fas fa-trash"></i></a></td>
+								<td><span th:text="${doacao.tipoItem}"></span></td>
+								<td><a th:href="${(#mvc.url('DC#deletarDoacao').arg(0, doacao.idDoacao)).build()}"><i class="fas fa-trash"></i></a></td>
 							</tr>
 						</tbody>
 					</table>

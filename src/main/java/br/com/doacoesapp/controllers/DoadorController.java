@@ -96,8 +96,8 @@ public class DoadorController {
 	}
 	
 	@RequestMapping("/deletarDoacao")
-	public String deletarDoacao(String rg){
-		Doacao doacao = cr.findByRg(rg);
+	public String deletarDoacao(long idDoacao){
+		Doacao doacao = cr.findByIdDoacao(idDoacao);
 		cr.delete(doacao);
 		
 		Doador doador = doacao.getDoador();

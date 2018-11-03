@@ -7,5 +7,5 @@ import br.com.doacoesapp.models.Doador;
 
 public interface DoacaoRepository extends CrudRepository<Doacao, String>{
 	Iterable<Doacao> findByDoador(Doador doador);
-	Doacao findByRg(String rg);
+	Doacao findByIdDoacao(long idDoacao);
 }
