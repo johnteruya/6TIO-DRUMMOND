@@ -29,22 +29,12 @@
 				<!-- LISTAGEM DOADOR SELECIONADO -->
 				<div class="col-md-12 py-3">
 					<div th:each="doador : ${doador}">
-						<div class="row">
-							<div class="col-md-1">
-								<p class="py-2">Nome</p>
-								<p class="py-1">Local</p>
-								<p class="py-1">Data</p>
-								<p class="py-1">Horário</p>
-							</div>
-							<div class="col-md-11">
-								<ul class="list-group">
-									<li class="list-group-item"><span th:text="${doador.nome}"></span></li>
-									<li class="list-group-item"><span th:text="${doador.local}"></span></li>
-									<li class="list-group-item"><span th:text="${doador.data}"></span></li>
-									<li class="list-group-item"><span th:text="${doador.horario}"></span></li>
-								</ul>
-							</div>
-						</div>
+						<ul class="list-group">
+							<li class="list-group-item"><p><small class="text-muted">Nome</small></p><span th:text="${doador.nome}"></span></li>
+							<li class="list-group-item"><p><small class="text-muted">Endereço</small></p><span th:text="${doador.local}"></span></li>
+							<li class="list-group-item"><p><small class="text-muted">Data</small></p><span th:text="${doador.data}"></span></li>
+							<li class="list-group-item"><p><small class="text-muted">Horário</small></p><span th:text="${doador.horario}"></span></li>
+						</ul>
 					</div>
 				</div>
 	
