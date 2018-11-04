@@ -33,10 +33,9 @@
 				<div class="col-md-12 py-3">
 					<div th:each="doador : ${doador}">
 						<ul class="list-group">
-							<li class="list-group-item"><p><small class="text-muted">Nome</small></p><span th:text="${doador.nome}"></span></li>
-							<li class="list-group-item"><p><small class="text-muted">Endereço</small></p><span th:text="${doador.local}"></span></li>
-							<li class="list-group-item"><p><small class="text-muted">Data</small></p><span th:text="${doador.data}"></span></li>
-							<li class="list-group-item"><p><small class="text-muted">Horário</small></p><span th:text="${doador.horario}"></span></li>
+							<li class="list-group-item"><p><small class="text-muted">Nome</small></p><span th:text="${doador.nomeDoador}"></span></li>
+							<li class="list-group-item"><p><small class="text-muted">Endereço</small></p><span th:text="${doador.endereco}"></span> | <span th:text="${doador.bairro}"></span></li>
+							<li class="list-group-item"><p><small class="text-muted">Data de Inclusão</small></p><span th:text="${doador.data}"></span></li>
 						</ul>
 					</div>
 				</div>

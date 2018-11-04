@@ -21,16 +21,16 @@ public class Doador implements Serializable{
 	private long idDoador;
 
 	@NotEmpty
-	private String nome;
+	private String nomeDoador;
 	
 	@NotEmpty
-	private String local;
+	private String endereco;
+	
+	@NotEmpty
+	private String bairro;
 	
 	@NotEmpty
 	private String data;
-
-	@NotEmpty
-	private String horario;
 	
 	@OneToMany
 	private List<Doacao> doacao;
@@ -45,20 +45,28 @@ public class Doador implements Serializable{
 		this.idDoador = idDoador;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeDoador() {
+		return nomeDoador;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeDoador(String nomeDoador) {
+		this.nomeDoador = nomeDoador;
 	}
 
-	public String getLocal() {
-		return local;
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setLocal(String local) {
-		this.local = local;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
 	}
 
 	public String getData() {
@@ -69,14 +77,6 @@ public class Doador implements Serializable{
 		this.data = data;
 	}
 
-	public String getHorario() {
-		return horario;
-	}
-
-	public void setHorario(String horario) {
-		this.horario = horario;
-	}
-
 	public List<Doacao> getDoacao() {
 		return doacao;
 	}
@@ -84,5 +84,5 @@ public class Doador implements Serializable{
 	public void setDoacao(List<Doacao> doacao) {
 		this.doacao = doacao;
 	}
-	
+
 }
