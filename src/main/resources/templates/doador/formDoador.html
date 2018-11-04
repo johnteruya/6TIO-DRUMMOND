@@ -32,32 +32,97 @@
 			<h3 class="display-4 text-center py-3">Inclusão de Novo Doador</h3>
 			<form method="post">
 				<div class="row" style="width: 100%; max-width: 820px; padding: 15px; margin: 0 auto">
+					
 					<div class="col-md-12 py-3">
-						<label> Nome: </label> 
-						<input class="form-control" placeholder="Inserir Nome" type="text" name="nomeDoador"/>
-					</div>
-					<div class="col-md-6 py-3">
-						<label> Endereço: </label>
-						<input class="form-control" placeholder="Inserir Endereço" type="text" name="endereco"/>
-					</div>
-					<div class="col-md-6 py-3">
 						<div class="row">
-							<div class="col-md-6">
-								<label> Bairro: </label>
-								<input class="form-control" placeholder="Inserir Bairro" type="text" name="bairro"/>
+						
+							<div class="col-md-12 text-center">
+								<th:block th:include="mensagemValidacao"></th:block>
 							</div>
-							<div class="col-md-6">
+						
+							<div class="col-md-8">
+								<label> Nome: </label> 
+								<input class="form-control" placeholder="Inserir Nome" type="text" name="nomeDoador"/>
+							</div>
+							
+							<div class="col-md-4">
 								<label> Data de Inclusão: </label>
 								<input class="form-control" type="date" name="data"/>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-12">
+
+					<div class="col-md-12 py-3">
 						<div class="row">
-							<div class="col-md-10 text-center">
-								<th:block th:include="mensagemValidacao"></th:block>
+							<div class="col-md-3">
+								<label> Endereço: </label>
+								<input class="form-control" placeholder="Inserir Endereço" type="text" name="endereco"/>
 							</div>
-							<div class="col-md-2 text-right py-3">
+							
+							<div class="col-md-3">
+								<label> Bairro: </label>
+								<input class="form-control" placeholder="Inserir Bairro" type="text" name="bairro"/>
+							</div>
+							
+							<div class="col-md-3">
+								<label> Complemento: </label>
+								<input class="form-control" placeholder="Ex. APTO 23" type="text" name="complemento"/>
+							</div>
+							
+							<div class="col-md-3">
+								<label> Estado: </label>
+								<select class="custom-select" name="estado"> 
+									<option>Selecionar Estado</option> 
+									<option value="ac">Acre</option> 
+									<option value="al">Alagoas</option> 
+									<option value="am">Amazonas</option> 
+									<option value="ap">Amapá</option> 
+									<option value="ba">Bahia</option> 
+									<option value="ce">Ceará</option> 
+									<option value="df">Distrito Federal</option> 
+									<option value="es">Espírito Santo</option> 
+									<option value="go">Goiás</option> 
+									<option value="ma">Maranhão</option> 
+									<option value="mt">Mato Grosso</option> 
+									<option value="ms">Mato Grosso do Sul</option> 
+									<option value="mg">Minas Gerais</option> 
+									<option value="pa">Pará</option> 
+									<option value="pb">Paraíba</option> 
+									<option value="pr">Paraná</option> 
+									<option value="pe">Pernambuco</option> 
+									<option value="pi">Piauí</option> 
+									<option value="rj">Rio de Janeiro</option> 
+									<option value="rn">Rio Grande do Norte</option> 
+									<option value="ro">Rondônia</option> 
+									<option value="rs">Rio Grande do Sul</option> 
+									<option value="rr">Roraima</option> 
+									<option value="sc">Santa Catarina</option> 
+									<option value="se">Sergipe</option> 
+									<option value="sp">São Paulo</option> 
+									<option value="to">Tocantins</option> 
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 py-3">
+						<div class="row">
+							
+							<div class="col-md-5">
+								<label> CPF/CNPJ: </label>
+								<input class="form-control" placeholder="Inserir CPF/CNPJ" type="text" name="cpf_cnpj"/>
+							</div>
+							
+							<div class="col-md-5">
+								<label> Tipo do Doador: </label>
+								<select class="custom-select" name="tipoDoador">
+									<option>Selecionar Tipo</option> 
+									<option value="Pessoa Física">Pessoa Física</option> 
+									<option value="Pessoa Jurídica">Pessoa Jurídica</option>
+								</select>
+							</div>
+							
+							<div class="col-md-2 text-right py-4">
 								<button class="btn btn-primary" type="submit">Adicionar</button>
 							</div>
 						</div>

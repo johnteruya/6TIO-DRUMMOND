@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 
@@ -24,19 +25,30 @@ public class Doador implements Serializable{
 	private String nomeDoador;
 	
 	@NotEmpty
+	private String cpf_cnpj;
+	
+	@NotEmpty
 	private String endereco;
 	
 	@NotEmpty
 	private String bairro;
+	
+	private String complemento;
+	
+	@NotEmpty
+	private String estado;
+	
+	@NotEmpty
+	private String tipoDoador;
 	
 	@NotEmpty
 	private String data;
 	
 	@OneToMany
 	private List<Doacao> doacao;
+	
+	
 
-	
-	
 	public long getIdDoador() {
 		return idDoador;
 	}
@@ -69,6 +81,22 @@ public class Doador implements Serializable{
 		this.bairro = bairro;
 	}
 
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
 	public String getData() {
 		return data;
 	}
@@ -83,6 +111,22 @@ public class Doador implements Serializable{
 
 	public void setDoacao(List<Doacao> doacao) {
 		this.doacao = doacao;
+	}
+
+	public String getCpf_cnpj() {
+		return cpf_cnpj;
+	}
+
+	public void setCpf_cnpj(String cpf_cnpj) {
+		this.cpf_cnpj = cpf_cnpj;
+	}
+
+	public String getTipoDoador() {
+		return tipoDoador;
+	}
+
+	public void setTipoDoador(String tipoDoador) {
+		this.tipoDoador = tipoDoador;
 	}
 
 }

@@ -30,6 +30,9 @@ public class Doacao implements Serializable{
 	
 	@ManyToOne
 	private Doador doador;
+	
+	
+	
 
 	public long getIdDoacao() {
 		return idDoacao;
