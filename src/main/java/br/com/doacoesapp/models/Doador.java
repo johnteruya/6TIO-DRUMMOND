@@ -39,6 +39,9 @@ public class Doador implements Serializable{
 	private String estado;
 	
 	@NotEmpty
+	private String contato;
+	
+	@NotEmpty
 	private String tipoDoador;
 	
 	@NotEmpty
@@ -48,6 +51,14 @@ public class Doador implements Serializable{
 	private List<Doacao> doacao;
 	
 	
+
+	public String getContato() {
+		return contato;
+	}
+
+	public void setContato(String contato) {
+		this.contato = contato;
+	}
 
 	public long getIdDoador() {
 		return idDoador;
