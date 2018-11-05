@@ -21,13 +21,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.csrf().disable().authorizeRequests()
-		.antMatchers(HttpMethod.GET, "/").permitAll()
-		.antMatchers(HttpMethod.GET, "/cadastrarDoador").hasRole("ADMIN")
-		.antMatchers(HttpMethod.POST, "/cadastrarDoador").hasRole("ADMIN")
-		.antMatchers(HttpMethod.GET, "/deletarDoador").hasRole("ADMIN")
-		.anyRequest().authenticated()
-		.and().formLogin().permitAll()
-		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
+			.antMatchers("/css/**", "/js/**", "/img/**").permitAll()
+			.antMatchers(HttpMethod.GET, "/").permitAll()
+			.antMatchers(HttpMethod.GET, "/cadastrarDoador").hasRole("ADMIN")
+			.antMatchers(HttpMethod.POST, "/cadastrarDoador").hasRole("ADMIN")
+			.antMatchers(HttpMethod.GET, "/deletarDoador").hasRole("ADMIN")
+			.anyRequest().authenticated()
+			.and()
+		.formLogin()
+			.permitAll()
+			.and()
+		.logout()
+			.logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
+		
 	}
 	
 	@Override
@@ -40,4 +46,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	public void configure(WebSecurity web) throws Exception{
 		web.ignoring().antMatchers("/materialize/**", "/style/**", "/bootstrap/**", "/jquery/**", "/popper.js/**", "/holder/**");
 	}
+	
 }

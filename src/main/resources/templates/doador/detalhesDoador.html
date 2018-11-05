@@ -37,8 +37,6 @@
 							<li class="list-group-item"><p><small class="text-muted">Endereço</small></p><span th:text="${doador.endereco}"></span>, <span th:text="${doador.bairro}"></span> | <span th:text="${doador.complemento}"></span> - <span th:text="${doador.estado}"></span></li>
 							<li class="list-group-item"><p><small class="text-muted">Data de Inclusão</small></p><span th:text="${doador.data}"></span></li>
 							<li class="list-group-item"><p><small class="text-muted">Tipo Doador</small></p><span th:text="${doador.tipoDoador}"></span></li>
-							
-							
 						</ul>
 					</div>
 				</div>
@@ -86,7 +84,6 @@
 							<tr>
 								<th scope="col">Doação</th>
 								<th scope="col">Tipo do Item</th>
-								<th scope="col">Alterar</th>
 								<th scope="col">Remover</th>
 							</tr>
 						</thead>
@@ -94,7 +91,6 @@
 							<tr th:each="doacao : ${doacoes}">
 								<td><span th:text="${doacao.nomeDoacao}"></span></td>
 								<td><span th:text="${doacao.tipoItem}"></span></td>
-								<td><i class="fas fa-pen"></i></td>
 								<td><a th:href="${(#mvc.url('DC#deletarDoacao').arg(0, doacao.idDoacao)).build()}"><i class="fas fa-trash"></i></a></td>
 							</tr>
 						</tbody>

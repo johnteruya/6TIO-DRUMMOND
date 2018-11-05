@@ -36,7 +36,6 @@
 							  <th scope="col">CPF/CNPJ</th>
 							  <th scope="col">Contato</th>
 							  <th scope="col">Data de Inclusão</th>
-							  <th scope="col">Alterar</th>
 							  <th scope="col">Deletar</th>
 						   </tr>
 						</thead>
@@ -46,7 +45,6 @@
 							  <td><span th:text="${doador.cpf_cnpj}"></span></td>
 							  <td><span th:text="${doador.contato}"></span></td>
 							  <td><span th:text="${doador.data}"></span></td>
-							  <td><i class="fas fa-pen"></i></td>
 							  <td><a th:href="${(#mvc.url('DC#deletarDoador').arg(0, doador.idDoador)).build()}"><i class="fas fa-trash"></i></a></td>
 						   </tr>
 						</tbody>
